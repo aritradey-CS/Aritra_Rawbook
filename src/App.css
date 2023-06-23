@@ -1,0 +1,31 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.left-panel {
+  width: 200px;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.left-panel button {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.left-panel button:hover {
+  background-color: #eaeaea;
+}
+
+.content {
+  margin-left: 20px;
+}
