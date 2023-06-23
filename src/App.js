@@ -1,26 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
 
-const App = () => {
-  const [activeComponent, setActiveComponent] = useState('home');
+function App() {
+  const [activeComponent, setActiveComponent] = useState('');
 
   const handleComponentClick = (component) => {
     setActiveComponent(component);
-  };
-
-  const renderComponent = () => {
-    switch (activeComponent) {
-      case 'home':
-        return <h2>Home Component</h2>;
-      case 'contact':
-        return <h2>Contact Component</h2>;
-      case 'information':
-        return <h2>Information Component</h2>;
-      case 'guide':
-        return <h2>Guide Component</h2>;
-      default:
-        return null;
-    }
   };
 
   return (
@@ -31,9 +16,14 @@ const App = () => {
         <button onClick={() => handleComponentClick('information')}>Information</button>
         <button onClick={() => handleComponentClick('guide')}>Guide</button>
       </div>
-      <div className="content">{renderComponent()}</div>
+      <div className="content">
+        {activeComponent === 'home' && <h2>Welcome to the Home Page!</h2>}
+        {activeComponent === 'contact' && <h2>Contact Information Page</h2>}
+        {activeComponent === 'information' && <h2>Information Page</h2>}
+        {activeComponent === 'guide' && <h2>Guide Page</h2>}
+      </div>
     </div>
   );
-};
+}
 
 export default App;
