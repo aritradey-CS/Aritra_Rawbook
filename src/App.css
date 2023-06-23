@@ -9,23 +9,31 @@
   }
 }
 
+body {
+  background-color: #f1f1f1; /* Set a nice background color */
+}
+
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f1f1f1;
+  background-image: url('background.jpg'); /* Replace 'your-background-image.jpg' with the path to your desired background image */
+  background-size: cover;
   font-family: Arial, sans-serif;
 }
 
 .left-panel {
+ 
+  margin-left: 10px;
   background-color: #333;
   color: #fff;
-  padding: 20px;
-  width: 200px;
+  padding: 30px;
+  width: 115px;
   display: flex;
   flex-direction: column;
   animation: slideIn 0.5s ease-in-out;
+  opacity: 0.8;/* Adjust the opacity as desired */
 }
 
 .left-panel button {
@@ -35,13 +43,16 @@
   padding: 10px;
   margin-bottom: 10px;
   cursor: pointer;
+  font-size: 18px; /* Increase the font size of the buttons */
 }
 
 .left-panel button:hover {
   background-color: #555;
+  opacity: 1;
 }
 
 .content {
+  margin-right: 10px;
   margin-left: 20px;
   animation: slideIn 0.5s ease-in-out;
 }
@@ -52,8 +63,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* App.css */
-
 .container {
   display: flex;
   height: 100vh;
@@ -61,9 +70,13 @@ h2 {
 
 .navbar {
   flex: 0 0 15%;
-  background-color: #333;
+  background-color: transparent; /* Make the navbar transparent */
   color: #fff;
   padding: 20px;
+  transition: background-color 0.3s ease; /* Add transition for smooth effect */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .navbar ul {
@@ -79,6 +92,7 @@ h2 {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s;
+  font-size: 20px; /* Increase the font size of the navigation links */
 }
 
 .navbar a:hover {
@@ -87,28 +101,7 @@ h2 {
 
 .content {
   flex: 1;
-  background-color: #f4f4f4;
+  background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the content background */
   padding: 20px;
-}
-
-
-body {
-  background-color: #f1f1f1; /* Set a nice background color */
-}
-
-.navbar {
-  background-color: transparent; /* Make the navbar transparent */
-  transition: background-color 0.3s ease; /* Add transition for smooth effect */
-}
-
-.navbar:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Change the background color on hover */
-}
-
-.navbar .nav-item a {
-  color: #fff; /* Set the color of the navigation links */
-}
-
-.navbar .nav-item.active a {
-  font-weight: bold; /* Increase the font weight of the active link */
+  border-radius: 10px; /* Add border radius to the content */
 }
