@@ -51,3 +51,64 @@ h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }
+
+/* App.css */
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.navbar {
+  flex: 0 0 15%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar li {
+  margin-bottom: 10px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
+}
+
+.content {
+  flex: 1;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+
+body {
+  background-color: #f1f1f1; /* Set a nice background color */
+}
+
+.navbar {
+  background-color: transparent; /* Make the navbar transparent */
+  transition: background-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.navbar:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Change the background color on hover */
+}
+
+.navbar .nav-item a {
+  color: #fff; /* Set the color of the navigation links */
+}
+
+.navbar .nav-item.active a {
+  font-weight: bold; /* Increase the font weight of the active link */
+}
