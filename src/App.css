@@ -1,50 +1,53 @@
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .App {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   height: 100vh;
+  background-color: #f1f1f1;
+  font-family: Arial, sans-serif;
 }
 
 .left-panel {
-  flex: 0 0 200px;
-  background-color: #f1f1f1;
-  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.5s ease-in-out;
 }
 
 .left-panel button {
-  display: block;
-  width: 100%;
-  padding: 8px 16px;
-  margin-bottom: 10px;
+  background-color: transparent;
+  color: #fff;
   border: none;
-  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
   cursor: pointer;
-  text-align: left;
-  color: #333;
 }
 
 .left-panel button:hover {
-  background-color: #eaeaea;
+  background-color: #555;
 }
 
 .content {
-  flex: 1;
   margin-left: 20px;
+  animation: slideIn 0.5s ease-in-out;
 }
 
-.home {
-  background-color: #ffe6cc;
-}
-
-.contact {
-  background-color: #ccf5ff;
-}
-
-.information {
-  background-color: #ccffcc;
-}
-
-.guide {
-  background-color: #ffccf5;
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
 }

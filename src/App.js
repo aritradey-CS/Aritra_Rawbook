@@ -1,29 +1,71 @@
 import React, { useState } from 'react';
 import './App.css';
 
-function App() {
-  const [activeComponent, setActiveComponent] = useState('');
+const MenuItem = ({ title, selected, onClick }) => {
+  return (
+    <button className={`menu-item ${selected ? 'selected' : ''}`} onClick={onClick}>
+      {title}
+    </button>
+  );
+};
 
-  const handleComponentClick = (component) => {
-    setActiveComponent(component);
+const Content = ({ selectedItem }) => {
+  const getContent = () => {
+    switch (selectedItem) {
+      case 'home':
+        return (
+          <div>
+            <h2>Welcome to the Home Page</h2>
+            <p>This is the content for the Home Page.</p>
+          </div>
+        );
+      case 'contact':
+        return (
+          <div>
+            <h2>Contact Information</h2>
+            <p>This is the content for the Contact Page.</p>
+          </div>
+        );
+      case 'information':
+        return (
+          <div>
+            <h2>Information Page</h2>
+            <p>This is the content for the Information Page.</p>
+          </div>
+        );
+      case 'guide':
+        return (
+          <div>
+            <h2>User Guide</h2>
+            <p>This is the content for the User Guide Page.</p>
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
+
+  return <div className="content">{getContent()}</div>;
+};
+
+const App = () => {
+  const [selectedItem, setSelectedItem] = useState('home');
+
+  const handleMenuItemClick = (menuItem) => {
+    setSelectedItem(menuItem);
   };
 
   return (
     <div className="App">
       <div className="left-panel">
-        <button onClick={() => handleComponentClick('home')}>Home</button>
-        <button onClick={() => handleComponentClick('contact')}>Contact</button>
-        <button onClick={() => handleComponentClick('information')}>Information</button>
-        <button onClick={() => handleComponentClick('guide')}>Guide</button>
+        <MenuItem title="Home" selected={selectedItem === 'home'} onClick={() => handleMenuItemClick('home')} />
+        <MenuItem title="Contact" selected={selectedItem === 'contact'} onClick={() => handleMenuItemClick('contact')} />
+        <MenuItem title="Information" selected={selectedItem === 'information'} onClick={() => handleMenuItemClick('information')} />
+        <MenuItem title="Guide" selected={selectedItem === 'guide'} onClick={() => handleMenuItemClick('guide')} />
       </div>
-      <div className="content">
-        {activeComponent === 'home' && <h2>Welcome to the Home Page!</h2>}
-        {activeComponent === 'contact' && <h2>Contact Information Page</h2>}
-        {activeComponent === 'information' && <h2>Information Page</h2>}
-        {activeComponent === 'guide' && <h2>Guide Page</h2>}
-      </div>
+      <Content selectedItem={selectedItem} />
     </div>
   );
-}
+};
 
 export default App;
