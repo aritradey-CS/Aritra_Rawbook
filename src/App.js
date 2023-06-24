@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./App.css";
 
 const MenuItem = ({ title, selected, onClick }) => {
@@ -48,13 +49,15 @@ const Content = ({ selectedItem }) => {
     }
   };
 
-  return <div className="content">{getContent()}</div>;
+  return <div className={`content ${selectedItem !== "home" ? "transparent" : ""}`}>{getContent()}</div>;
 };
 
 const App = () => {
   const [selectedItem, setSelectedItem] = useState("home");
+  const [prevSelectedItem, setPrevSelectedItem] = useState("home");
 
   const handleMenuItemClick = (menuItem) => {
+    setPrevSelectedItem(selectedItem);
     setSelectedItem(menuItem);
   };
 
@@ -82,9 +85,10 @@ const App = () => {
           onClick={() => handleMenuItemClick("guide")}
         />
       </div>
-      <Content selectedItem={selectedItem} />
+      <Content selectedItem={selectedItem} prevSelectedItem={prevSelectedItem} />
     </div>
   );
 };
+
 
 export default App;

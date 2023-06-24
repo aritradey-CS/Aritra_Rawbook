@@ -80,9 +80,18 @@ h2 {
   transition: background-color 0.3s ease;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%; /* Set the height of the navbar to 100% */
+  box-sizing: border-box; /* Include padding and border in the height calculation */
 }
+.navbar button {
+  height: 40px; /* Increase the height of the navbar buttons */
+  width: 80px; /* Adjust the width of the navbar buttons as desired */
+  font-size: 20px; /* Increase the font size of the navbar buttons */
+}
+
 
 
 
