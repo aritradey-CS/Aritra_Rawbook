@@ -22,6 +22,7 @@
 
 body {
   background-color: #f1f1f1;
+  margin: 0;
 }
 
 .App {
@@ -35,38 +36,39 @@ body {
 }
 
 .left-panel {
-  margin-left: 10px;
+  margin-left: 0px;
   background-color: #333;
   color: #fff;
   padding: 30px;
-  width: 115px;
-  height: 550px;
+  width: 10vw;
+  height: 92vh;
   display: flex;
-  border-radius: 10px;
+  border-radius: 0;
+  -ms-flex-direction: column;
   flex-direction: column;
   animation: slideIn 0.5s ease-in-out;
   opacity: 0.8;
 }
 
-.left-panel button {
-  background-color: transparent;
-  color: #fff;
-  border: none;
+.left-panel .menu-item {
+  display: block;
   padding: 10px;
   margin-bottom: 10px;
-  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s, opacity 0.3s;
+  border-radius: 5px;
   font-size: 18px;
 }
 
-.left-panel button:hover {
+.left-panel .menu-item:hover {
   background-color: #555;
   opacity: 1;
 }
 
-.content {
-  margin-right: 10px;
-  margin-left: 20px;
-  animation: slideIn 0.5s ease-in-out;
+.left-panel .menu-item.active {
+  background-color: #555;
+  opacity: 1;
 }
 
 .content.slide-out {
@@ -130,5 +132,9 @@ h2 {
   flex: 1;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  height: 94.5vh;
+  animation: slideIn 0.5s ease-in-out;
 }
