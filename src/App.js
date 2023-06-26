@@ -1,7 +1,7 @@
-import React from 'react';
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 
-import './App.css';
+import "./App.css";
 
 const Home = () => (
   <div>
@@ -15,6 +15,8 @@ const Contact = () => (
     <h2>Contact Information</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quasi nesciunt
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+      blanditiis.
     </p>
   </div>
 );
@@ -23,8 +25,11 @@ const Information = () => (
   <div>
     <h2>Information Page</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dolorum
-      ullam explicabo laboriosam veritatis amet minima qui cumque beatae molestiae
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias
+      dolorum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque
+      velit itaque optio facilis adipisci exercitationem nesciunt quae esse
+      debitis quas?ullam explicabo laboriosam veritatis amet minima qui cumque
+      beatae molestiae
     </p>
   </div>
 );
@@ -35,7 +40,10 @@ const Guide = () => (
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet provident
       enim reiciendis unde fugiat distinctio dolores suscipit accusantium, sint
-      nam, rem eum! Illum
+      nam, rem eum! Illum Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Doloribus facilis sapiente tempora magni vitae, atque, tempore sit
+      ab enim magnam officiis saepe placeat, reprehenderit excepturi? Lorem
+      ipsum dolor sit amet.
     </p>
   </div>
 );
@@ -50,7 +58,11 @@ const App = () => (
         <NavLink to="/Contact" className="menu-item" activeClassName="active">
           Contact
         </NavLink>
-        <NavLink to="/Information" className="menu-item" activeClassName="active">
+        <NavLink
+          to="/Information"
+          className="menu-item"
+          activeClassName="active"
+        >
           Information
         </NavLink>
         <NavLink to="/Guide" className="menu-item" activeClassName="active">
