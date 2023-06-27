@@ -2,9 +2,4 @@ The project consists of a React.js application with a left-panel navigation menu
 
 
 
-![Uploading image.png…]()
-
-
-
-
->>>>>>> bd156dce5edacb38bef46a5915e5a314f068a1d6
+![Screenshot (673)](https://github.com/aritradey-CS/Aritra_Rawbook/assets/81703791/9cd98a8f-4aa9-4ccf-b87c-94a9ab104fba)
